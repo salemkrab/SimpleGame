@@ -20,6 +20,11 @@ public class Guerrier extends Personne {
             this.setPointsAction(this.getPointsAction() - 20);
         }
     }
+    @Override
+    public String toString(){
+
+        return "Guerrier";
+    }
 
     public Arme getArme() {
         return arme;

@@ -18,4 +18,9 @@ public class Soigneur extends Personne {
             this.setPointsAction(this.getPointsAction() - 30);
         }
     }
+    @Override
+    public String toString(){
+
+        return "Soigneur";
+    }
 }

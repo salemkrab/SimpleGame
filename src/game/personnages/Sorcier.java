@@ -15,4 +15,9 @@ public class Sorcier extends Personne {
             this.setPointsAction(this.getPointsAction() - 40);
         }
     }
+    @Override
+    public String toString(){
+
+        return "Sorcier";
+    }
 }
