@@ -1,5 +1,7 @@
 package game.personnages;
 
+import game.utils.Utils;
+
 public abstract class Personne{
     private String nom;
     private String prenom;
@@ -50,5 +52,6 @@ public abstract class Personne{
 
 
     public abstract void attaquer(Personne p);
+
 
 }

@@ -1,6 +1,7 @@
 package game.personnages;
 
 import game.armes.Arme;
+import game.utils.Utils;
 
 public class Guerrier extends Personne {
     private Arme arme;
@@ -11,9 +12,13 @@ public class Guerrier extends Personne {
 
     @Override
     public void attaquer(Personne p) {
-        int degats = this.arme.getDegats();
-        p.setPtnVie(p.getPtnVie()-degats);
-        this.setPointsAction(this.getPointsAction()-40);
+        if (this.getPointsAction()>0) {
+//            int degats = this.getArme().getDegats();
+            int damage = Utils.randInt(5,20);
+            p.setPtnVie(p.getPtnVie() - damage);
+
+            this.setPointsAction(this.getPointsAction() - 20);
+        }
     }
 
     public Arme getArme() {

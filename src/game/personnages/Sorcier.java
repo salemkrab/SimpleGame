@@ -1,5 +1,7 @@
 package game.personnages;
 
+import game.utils.Utils;
+
 public class Sorcier extends Personne {
     public Sorcier(String nom, String prenom) {
         super(nom, prenom);
@@ -7,8 +9,10 @@ public class Sorcier extends Personne {
 
     @Override
     public void attaquer(Personne p) {
-        p.setPtnVie(p.getPtnVie()-20);
-        this.setPointsAction(this.getPointsAction()-40);
-
+        if (this.getPointsAction()>0) {
+            int damage = Utils.randInt(5,20);
+            p.setPtnVie(p.getPtnVie() - damage);
+            this.setPointsAction(this.getPointsAction() - 40);
+        }
     }
 }
