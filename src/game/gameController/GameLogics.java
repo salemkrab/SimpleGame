@@ -64,15 +64,15 @@ public class GameLogics {
             int healthBefore = op2.getPtnVie();
             op1.attaquer(op2);
             int healthAfter = op2.getPtnVie();
-            System.out.println(op1.getPrenom() + " ("+op1.toString()+") attaque ! il inflige "+ (healthBefore - healthAfter) +
-                    " points de dégats à " + op2.getPrenom()+ " ("+op2.toString()+")");
+            System.out.println(op1.getPrenom() + " ("+ op1 +") attaque ! il inflige "+ (healthBefore - healthAfter) +
+                    " points de dégats à " + op2.getPrenom()+ " ("+ op2 +")");
         }
         else {
             int healthBefore = op1.getPtnVie();
             op2.attaquer(op1);
             int healthAfter = op1.getPtnVie();
-            System.out.println(op2.getPrenom() + " ("+op2.toString()+") attaque ! il inflige "+ (healthBefore - healthAfter) +
-                    " points de dégats à " + op1.getPrenom() + " ("+op1.toString()+")");
+            System.out.println(op2.getPrenom() + " ("+ op2 +") attaque ! il inflige "+ (healthBefore - healthAfter) +
+                    " points de dégats à " + op1.getPrenom() + " ("+ op1 +")");
         }
 
         System.out.println(
@@ -150,7 +150,7 @@ public class GameLogics {
     }
 
     private static int getRoundNum() {
-        return roundNum;
+        return GameLogics.roundNum;
     }
     private static void setRoundNum(int roundNum) {
         GameLogics.roundNum = roundNum;
